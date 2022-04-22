@@ -1,0 +1,19 @@
+{
+    "name": "yoshioka/todo",
+    "require": {
+        "slim/slim": "^4.10",
+        "php-di/php-di": "^6.4",
+        "ray/media-query": "^0.5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Yoshioka\\Todo\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "yoshioka",
+            "email": "yoshioka@bengo4.com"
+        }
+    ]
+}
