@@ -2,12 +2,12 @@
     "name": "yoshioka/todo",
     "require": {
         "slim/slim": "^4.10",
-        "php-di/php-di": "^6.4",
-        "ray/media-query": "^0.5.0"
+        "ray/media-query": "^0.5.0",
+        "ray/di": "^2.14"
     },
     "autoload": {
         "psr-4": {
-            "Yoshioka\\Todo\\": "src/"
+            "App\\Todo\\": "src/"
         }
     },
     "authors": [
