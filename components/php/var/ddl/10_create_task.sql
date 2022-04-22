@@ -1,0 +1,5 @@
+CREATE TABLE Task(
+    id VARCHAR(36) PRIMARYKEY,
+    body TEXT NOT NULL,
+    completed TINYINT UNSIGNED NOT NULL
+);
