@@ -1,0 +1,55 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "Todo Schema",
+    "description": "Todo schema comprises the entire JSON document.",
+    "default": {},
+    "examples": [
+        {
+            "id": 1,
+            "body": "todo tasks",
+            "completed": "2022-05-01"
+        }
+    ],
+    "required": [
+        "id",
+        "body",
+        "completed"
+    ],
+    "properties": {
+        "id": {
+            "$id": "#/properties/id",
+            "type": "string",
+            "title": "todo identifiler",
+            "description": "todo identifiler format uuid version 4",
+            "default": "F274C245-C83E-476A-AD37-FF82C720EB5C",
+            "examples": [
+                "F274C245-C83E-476A-AD37-FF82C720EB5C"
+            ]
+        },
+        "body": {
+            "$id": "#/properties/body",
+            "type": "string",
+            "title": "Todo body",
+            "description": "It is the content to be carried out in Todo",
+            "default": "",
+            "examples": [
+                "todo tasks"
+            ]
+        },
+        "completed": {
+            "$id": "#/properties/completed",
+            "type": "string",
+            "format": "date",
+            "title": "completed date",
+            "description": "todo completed date",
+            "default": "2022-05-01",
+            "examples": [
+                "2022-05-01",
+                "2022-12-31"
+            ]
+        }
+    },
+    "additionalProperties": false
+}

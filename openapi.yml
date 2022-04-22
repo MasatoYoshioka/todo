@@ -1,0 +1,63 @@
+openapi: 3.0.0
+info:
+  title: todo
+  description: todo applicaiton
+  contact: 
+    name:  Masato Yoshioka
+    email: yoshioka0627@gmail.com
+  version: 0.0.1
+servers:
+  - url: http://localhost
+paths:
+  /tasks:
+    get:
+      summary: get task resources
+      description: Get Task List
+      operationId: GetTaskList
+      responses:
+        200:
+          description: a task list returned
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: 'schemas/Task.json'
+    post:
+      summary: task create
+      description: new task create
+      operationId: PostTaskItem
+      requestBody:
+        content:
+          'application/json':
+            schema:
+              $ref: 'schemas/Task.json'
+      responses:
+        201:
+          description: task created
+  /tasks/{id}:
+    get:
+      summary: get task resource 
+      description: Get Task Item
+      operationId: GetTaskItem
+      responses:
+        200:
+          description: a task item returned
+          content:
+            'application/json':
+              schema:
+                $ref: 'schemas/Task.json'
+    put:
+      summary: update task resource
+      description: Update Task Item
+      operationId: UpdateTaskItem
+      responses:
+        201:
+          description: no contents
+    delete:
+      summary: delete task resource
+      description: Delete Task Item
+      operationId: DeleteTaskItem
+      responses:
+        201:
+          description: no contents
